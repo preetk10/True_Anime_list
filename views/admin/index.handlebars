@@ -1,0 +1,16 @@
+<div>
+<table class="table">
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">Get Details</th>
+    <th scope="col">Delete Title</th>
+  </tr>
+  {{#each ams}}
+  <tr>
+    <td>{{this}}</td>
+    <td><a href='../find/{{this}}'>{{this}}</a></td>
+    <td><a href='/admin/delete/{{this}}'>{{this}}</a></td>
+  </tr>
+    {{/each}}
+</table>
+</div>

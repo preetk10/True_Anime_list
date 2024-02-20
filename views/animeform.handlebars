@@ -1,0 +1,47 @@
+<form method="post">
+      <div class="row mb-3">
+        <div class="col-12">
+          <label class="form-label">Title</label>
+          <input class="form-control" name="title_name" type="text" maxlength="100" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label class="form-label">Description</label>
+          <input class="form-control" name="anime_description" type="text" maxlength="100" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="anime_type" class="form-label">Type</label>
+          <input class="form-control" type="text" name="anime_type" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <label for="anime_status " class="form-label">Status</label>
+          <input class="form-control" type="text" name="anime_status" required>
+        </div>
+      </div>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label for ="rating" class="form-label">rating</label>
+            <input class="form-control" type="number" name="rating" min="1" max="5"required>
+          </div>
+        </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label for="episodes" class="form-label">episodes</label>
+              <input class="form-control" type="number" name="episodes" required>
+            </div>
+          </div>
+            <div class="row mb-3">
+        <div class="col-12">
+          <label class="form-label">duration</label>
+          <input class="form-control" type="number" name="duration" min="5" max="60" required>
+        </div>
+      </div>
+        <div class="row">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+</form>

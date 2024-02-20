@@ -1,0 +1,41 @@
+    <h1>Details of {{title_name}}:</h1>
+    <form action="/addtolist" method = 'POST'>
+    <input type ='hidden' name='title' value="{{title_name}}"/>
+    <button class="btn btn-primary" type="submit">Add to My List</button>
+    </form>
+    <dl>
+        <dt>Title</dt>
+        <dd>{{title_name}}</dd>
+        <dt>Description</dt>
+        <dd>{{anime_description}}</dd>
+        <dt>Status</dt>
+        <dd>{{anime_status}}</dd>
+        <dt>Rating</dt>
+        <dd>{{rating}}</dd>
+        <dt>Episodes</dt>
+        <dd>{{episodes}}</dd>
+        <dt>Duration</dt>
+        <dd>{{duration}}</dd>
+    </dl>
+    {{#if result}}
+                <div>
+                  <h4>Review</h4>
+    <ul class="pf">
+                    {{#each result}}
+            <li>{{this.review}}</li>
+                            {{/each}}
+    </ul>
+    </div>
+    {{/if}}
+<h2 id="ref" class ='ref' name='ref'></h2>
+    <div>
+        <h4>Add Comment</h4>
+        <form id='commentform' method="Post" action="/comment/{{title_name}}" name="commentform" onsubmit="commentsubmit()">
+          {{!-- //  --}}
+        <input type="hidden" name="title" id="title" value='{{title_name}}'>
+        <label for="review">Write Your Review</label>
+        <input type="text" id='review' name="review">
+        <br> <br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
